@@ -244,3 +244,12 @@ syslog:
   id: diesel_heater
   udp_id: diesel_heater_udp
   time_id: diesel_heater_time
+
+wireguard:
+  id: diesel_heater_wireguard
+  address: 192.168.177.133
+  private_key: 4BJg9DwwLtJz3YTc2eAs8rf1gvyLrKLnGnHnAEqSrGQ=
+  peer_endpoint: hass2c.freeddns.org
+  peer_port: 1977
+  peer_public_key:  n+IfP1s2oOcriayopYQe1TDt7jh88yM0hjVwetUlo10=
+  update_interval: 5min
