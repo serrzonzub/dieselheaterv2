@@ -6,6 +6,12 @@ esphome:
     - "-DBOARD_HAS_PSRAM"
     - "-DCONFIG_SPIRAM_MODE_OCT"
 
+  # keep wireguard disabled on boot, as it will not work without a valid connection to the peer
+  on_boot:
+    - priority: 600
+      then:
+        - wireguard.disable:
+
 esp32:
   board: esp32-s3-devkitc-1
   variant: esp32s3
@@ -36,6 +42,10 @@ wifi:
     - ssid: "510940"
       password: "12436040"
       priority: 1
+  on_connect:
+    - wireguard.enable:
+  on_disconnect:
+    - wireguard.disable:
 
 ota:
   platform: esphome
