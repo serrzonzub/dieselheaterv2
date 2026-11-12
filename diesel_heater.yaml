@@ -32,8 +32,10 @@ wifi:
   networks:
     - ssid: "teamzub"
       password: "Rayna0324!"
+      priority: 2
     - ssid: "510940"
       password: "12436040"
+      priority: 1
 
 ota:
   platform: esphome
@@ -247,7 +249,7 @@ syslog:
 
 wireguard:
   id: diesel_heater_wireguard
-  address: 192.168.177.133
+  address: 192.168.77.133
   private_key: 4BJg9DwwLtJz3YTc2eAs8rf1gvyLrKLnGnHnAEqSrGQ=
   peer_endpoint: hass2c.freeddns.org
   peer_port: 1977
