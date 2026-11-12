@@ -254,4 +254,4 @@ wireguard:
   peer_endpoint: hass2c.freeddns.org
   peer_port: 1977
   peer_public_key:  n+IfP1s2oOcriayopYQe1TDt7jh88yM0hjVwetUlo10=
-  update_interval: 5min
+  update_interval: 1min
